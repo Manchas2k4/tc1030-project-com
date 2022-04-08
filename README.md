@@ -1,5 +1,5 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Proyecto Integrador: Simulación de un sistema de comunicación celular.
+# Situación problema: Simulación de un sistema de comunicación celular.
 
 ## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
 En este repositorio encontrarás una serie de carpetas y archivos que necesitarás para el desarrollo del proyecto.
