@@ -35,7 +35,7 @@ Existen 5 clases interactuando entre sí en este proyecto:
 * InternetOperator (derivado de Operator).
 * Bill (cuenta).
 
-Ten en cuenta que será necesario hacer los cálculos necesarios mediante el uso de los métodos correspondiente en la clase *Customer*, *Operator* (o derivados) o *Bill*, no en el programa principal.
+Ten en cuenta que será necesario hacer los cálculos necesarios mediante el uso de los métodos correspondiente en las clases *Customer*, *Operator* (o derivados) o *Bill*, no en el programa principal.
 
 #### <span style="color: rgb(26, 99, 169);">**Bill**</span>
 La clase *Bill* cuenta con las siguientes variables de estado:
