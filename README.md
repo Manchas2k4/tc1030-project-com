@@ -4,7 +4,7 @@
 ## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
 En este repositorio encontrarás una serie de carpetas y archivos que necesitarás para el desarrollo del proyecto.
 * *test_cases*: En este directorio encontrarás los archivos de entrada (*input0.txt*, *input1.txt*, *input2.txt*, *input3.txt*, *input4.txt*, *input5.txt*, *input6.txt*) que utilizaremos para probar el sistema completo. Adicionalmente están las salida esperadas para cada uno de los archivos de entrada (*output0.txt*, *output1.txt*, *output2.txt*, *output3.txt*, *output4.txt*, *output5.txt*, *output6.txt*).
-* *unit_testing*: En este directorio se encuentran los archivos de pruebas de unidad para cada una de las clases que tienes que desarrollar. Estos archivos de prueba te permiten verificar si tu implementación es correcta.
+* *unit_test*: En este directorio se encuentran los archivos de pruebas de unidad para cada una de las clases que tienes que desarrollar. Estos archivos de prueba te permiten verificar si tu implementación es correcta.
 * *archivos cabecera (o header)*: Archivos en los que se realiza la implementación de cada clase.
 * *main.cpp*: Archivo que contiene la función *main*. En este archivo se realiza la lectura/escritura de archivos.
 
