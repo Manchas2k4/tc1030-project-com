@@ -74,35 +74,35 @@ La clase cuenta con los siguientes métodos:
 * `toString()`: Regresa un string con el siguiente formato: "Operator #id : totalSpentTalkingTime totalMessageSent addTotalInternetUsage". Todas las cantidades de punto flotantes deben tener una precisión de dos números decimales.
 
 #### <span style="color: rgb(26, 99, 169);">**VoxOperator**</span>
-Este tipo de operador se especializa en aquellas personas que hacen un uso más intensivo de las llamadas y los mensajes de texto. Deriva de *Operator*.
+Este tipo de operador se especializa en aquellas personas que hacen un uso más intensivo de las llamadas y los mensajes de texto. Deriva de `Operator`.
 
 La clase cuenta con los siguientes métodos:
 * Constructor con 6 parámetros. Recibe el id, el costo por minuto de llamada, el costo por envío de mensaje, el costo por GB, el porcentaje de descuento y el tipo de operador. Debe invocar al constructor de la clase superior.
 * Constructor de copia. Debe invocar al constructor de la clase superior.
-* *calculateTalkingCost(int minute, int age)*: Si la cantidad de minutos o la edad es menor igual a 0, regresará 0. En caso contrario, calcula el costo de la llamada tomando en cuenta el costo por minuto definido. Si la persona es menor a 18 o mayor a 65, le aplica el descuento definido.
-* *double calculateMessageCost(int quantity, int thisOpId, int otherOpId)*: Si la cantidad de mensajes es menor igual a 0, regresará 0. En caso contrario, calcula el costo de enviar los mensajes tomando en cuenta el costo por envío definido. Si los mensajes son enviados al mismo operador, le aplica el descuento definido.
-* *calculateNetworkCost(double amount)*: Si la cantidad de GB es mayor a 0, calcula el costo por GB.
+* `calculateTalkingCost(int minute, int age)`: Si la cantidad de minutos o la edad es menor igual a 0, regresará 0. En caso contrario, calcula el costo de la llamada tomando en cuenta el costo por minuto definido. Si la persona es menor a 18 o mayor a 65, le aplica el descuento definido.
+* `double calculateMessageCost(int quantity, int thisOpId, int otherOpId)`: Si la cantidad de mensajes es menor igual a 0, regresará 0. En caso contrario, calcula el costo de enviar los mensajes tomando en cuenta el costo por envío definido. Si los mensajes son enviados al mismo operador, le aplica el descuento definido.
+* `calculateNetworkCost(double amount)`: Si la cantidad de GB es mayor a 0, calcula el costo por GB.
 
 #### <span style="color: rgb(26, 99, 169);">**InternetOperator**</span>
-Este tipo de operador se especializa en aquellas personas que hacen un uso más intensivo de Internet. Deriva de *Operator*.
+Este tipo de operador se especializa en aquellas personas que hacen un uso más intensivo de Internet. Deriva de `Operator`.
 
 La clase cuenta con los siguientes métodos:
 * Constructor con 6 parámetros. Recibe el id, el costo por minuto de llamada, el costo por envío de mensaje, el costo por GB, el porcentaje de descuento y el tipo de operador. Debe invocar al constructor de la clase superior.
 * Constructor de copia. Debe invocar al constructor de la clase superior.
-* *calculateTalkingCost(int minute, int age)*: Si la cantidad de minutos o la edad es menor igual a 0, regresará 0. En caso contrario, calcula el costo de la llamada tomando en cuenta el costo por minuto definido. Si la cantidad de minutos es menor a 2, le aplica el descuento definido.
-* *double calculateMessageCost(int quantity, int thisOpId, int otherOpId)*: Si la cantidad de mensajes es menor igual a 0, regresará 0. En caso contrario, calcula el costo de enviar los mensajes tomando en cuenta el costo por envío definido. Si la cantidad de mensajes enviados es menor a 3, le aplica el descuento definido.
-* *calculateNetworkCost(double amount)*: Si la cantidad de GB es menor o igual a cero, regresará 0. Sólo se aplicarán cargos si la cantidad de GB utilizados en total, excede al limite de 1GB.
+* `calculateTalkingCost(int minute, int age)`: Si la cantidad de minutos o la edad es menor igual a 0, regresará 0. En caso contrario, calcula el costo de la llamada tomando en cuenta el costo por minuto definido. Si la cantidad de minutos es menor a 2, le aplica el descuento definido.
+* `double calculateMessageCost(int quantity, int thisOpId, int otherOpId)`: Si la cantidad de mensajes es menor igual a 0, regresará 0. En caso contrario, calcula el costo de enviar los mensajes tomando en cuenta el costo por envío definido. Si la cantidad de mensajes enviados es menor a 3, le aplica el descuento definido.
+* `calculateNetworkCost(double amount)`: Si la cantidad de GB es menor o igual a cero, regresará 0. Sólo se aplicarán cargos si la cantidad de GB utilizados en total, excede al limite de 1GB.
 
 #### <span style="color: rgb(26, 99, 169);">**Customer**</span>
-La clase *Customer* cuenta con las siguientes variables de estado:
-* *id* : Identificador del cliente.
-* *name*: Nombre del cliente.
-* *age* : Edad del cliente.
-* *totalSpentTalkingTime*: El tiempo total que este cliente ha empleado en llamadas.
-* *totalMessageSent*: Los mensajes totales que este cliente ha enviado.
-* *totalInternetUsage*: El total de GB's utilizados por este cliente.
-* *op*: Apuntador a un objeto de la clase Operator. El operador que da servicio a este cliente.
-* *bill*: Apuntador a un objeto de la clase Bill. La factura del cliente.
+La clase `Customer` cuenta con las siguientes variables de estado:
+* `id` : Identificador del cliente.
+* `name`: Nombre del cliente.
+* `age` : Edad del cliente.
+* `totalSpentTalkingTime`: El tiempo total que este cliente ha empleado en llamadas.
+* `totalMessageSent`: Los mensajes totales que este cliente ha enviado.
+* `totalInternetUsage`: El total de GB's utilizados por este cliente.
+* `op`: Apuntador a un objeto de la clase Operator. El operador que da servicio a este cliente.
+* `bill`: Apuntador a un objeto de la clase Bill. La factura del cliente.
 
 La clase cuenta con los siguientes métodos:
 * Constructor con 5 parámetros. Recibe el id, el nombre, la edad, el operador y el límite de crédito. Se debe crear el objeto de la clase *Bill*.
@@ -110,24 +110,24 @@ La clase cuenta con los siguientes métodos:
 * Destructor. Debe eliminar la factura. Todos los apuntadores debe ser igualados a nulo.
 * Métodos de acceso para todas las variables de instancia. (Si consideras necesario agregar métodos de modificación, adelante).
 * Método de modificación para la variable *op*.
-* *talk (int minutes, Customer &other)*: Si la cantidad es mayor a 0 y *other* es un cliente diferente, se calcula el costo por los minutos que duró la llamada. Si todavía hay límite de crédito en la factura, deberá agregar el costo a la factura y agrega los minutos empleados tanto en el conteo de los clientes involucrados como del operador de este cliente.
-* *message(int quantity, const Customer &other)*: Si la cantidad es mayor a 0 y *other* es un cliente diferente, se calcula el costo por los mensajes enviados. Si todavía hay límite de crédito en la factura, deberá agregar el costo a la factura y agrega los mensajes enviados en el conteo del cliente y del operador.
-* *connection(double amount)*: Si la cantidad es mayor a 0, se calcula el costo por el uso de Internet. Si todavía hay límite de crédito en la factura, deberá agregar el costo a la factura y agrega los GB utilizados tanto en el conteo del cliente y del operador.
-* *toString()*: Regresa un string con el siguiente formato: "Customer #id : totalMoneySpend currentDebt". Todas las cantidades de punto flotantes deben tener una precisión de dos números decimales.
+* `talk (int minutes, Customer &other)`: Si la cantidad es mayor a 0 y `other` es un cliente diferente, se calcula el costo por los minutos que duró la llamada. Si todavía hay límite de crédito en la factura, deberá agregar el costo a la factura y agrega los minutos empleados tanto en el conteo de los clientes involucrados como del operador de este cliente.
+* `message(int quantity, const Customer &other)`: Si la cantidad es mayor a 0 y `other` es un cliente diferente, se calcula el costo por los mensajes enviados. Si todavía hay límite de crédito en la factura, deberá agregar el costo a la factura y agrega los mensajes enviados en el conteo del cliente y del operador.
+* `connection(double amount)`: Si la cantidad es mayor a 0, se calcula el costo por el uso de Internet. Si todavía hay límite de crédito en la factura, deberá agregar el costo a la factura y agrega los GB utilizados tanto en el conteo del cliente y del operador.
+* `toString()`: Regresa un string con el siguiente formato: "Customer #id : totalMoneySpend currentDebt". Todas las cantidades de punto flotantes deben tener una precisión de dos números decimales.
 
 #### <span style="color: rgb(26, 99, 169);">**main.cpp**</span>
 En el archivo *main.cpp* se realizarán las operaciones generales de entrada y salida. Leerás de un archivo de entrada las operaciones sobre la simulación, las deberás realizar e imprimirás los resultados en el archivo de salida.
 
 Las operaciones se explican de manera más desatallada, más adeelante en este documento. El nombre de los archivos de entrada y salida se darán como argumentos del programa a través de la línea de comandos. Si el archivo de entrada no existe, el programa termina.
 
-Deberás manejar dos vectores, uno para apuntadores a objetos *Customer* y otro para apuntadores a objetos *Operator*.
+Deberás manejar dos vectores, uno para apuntadores a objetos `Customer` y otro para apuntadores a objetos `Operator`.
 
 #### <span style="color: rgb(26, 99, 169);">**Entrada**</span>
 Vas a leer el archivo de entrada elemento por elemento.
 
-La primera línea tiene tres números enteros, C, O y N. El número *C* represnta el número de clientes que estarán en la simulación. El segundo número, *O*, indica el número de operadores en la simulación. El tercer número, *N*, representa el número de eventos a simular.
+La primera línea tiene tres números enteros, `C`, `O` y `N`. El número `C` represnta el número de clientes que estarán en la simulación. El segundo número, `O`, indica el número de operadores en la simulación. El tercer número, `N`, representa el número de eventos a simular.
 
-Las siguientes línea *N* serán algunas de las siguientes operaciones:
+Las siguientes línea `N` serán algunas de las siguientes operaciones:
 1. Creando un nuevo cliente.
 2. Creando un nuevo operador.
 3. Un cliente puede hablar con otro cliente.
@@ -143,7 +143,7 @@ Esta línea contiene un 1 seguido del nombre del cliente, la edad, el identifica
 ```
 1 <name> <age> <opeatorId> <limitingAmount>
 ```
-Toma en cuenta que el identificador del cliente será el orden de creación. Por ejemplo, el primer cliente creado debe tener Id 0 y debe colocarse la posición 0 del vector. Además, no existe ninguna operación para crear un objeto *Bill* (lo debes realizar en el constructor del cliente).
+Toma en cuenta que el identificador del cliente será el orden de creación. Por ejemplo, el primer cliente creado debe tener id 0 y debe colocarse la posición 0 del vector. Además, no existe ninguna operación para crear un objeto `Bill` (lo debes realizar en el constructor del cliente).
 
 ##### <span style="color: rgb(26, 99, 169);">**2. Creando un nuevo operador**</span>
 Esta línea contiene un 2 seguido del cargo por llamada, cargo por mensaje, cargo por uso de internet y el descuento a aplicar.
