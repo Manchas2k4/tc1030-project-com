@@ -3,10 +3,10 @@
 
 ## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
 En este repositorio encontrarás una serie de carpetas y archivos que necesitarás para el desarrollo del proyecto.
-* *test_cases*: En este directorio encontrarás los archivos de entrada (*input0.txt*, *input1.txt*, *input2.txt*, *input3.txt*, *input4.txt*, *input5.txt*, *input6.txt*) que utilizaremos para probar el sistema completo. Adicionalmente están las salida esperadas para cada uno de los archivos de entrada (*output0.txt*, *output1.txt*, *output2.txt*, *output3.txt*, *output4.txt*, *output5.txt*, *output6.txt*).
+* *test_cases*: En este directorio encontrarás los archivos de entrada (`input0.txt`, `input1.txt`, `input2.txt`, `input3.txt`, `input4.txt`, `input5.txt`, `input6.txt`) que utilizaremos para probar el sistema completo. Adicionalmente están las salida esperadas para cada uno de los archivos de entrada (`output0.txt`, `output1.txt`, `output2.txt`, `output3.txt`, `output4.txt`, `output5.txt`, `output6.txt`).
 * *unit_test*: En este directorio se encuentran los archivos de pruebas de unidad para cada una de las clases que tienes que desarrollar. Estos archivos de prueba te permiten verificar si tu implementación es correcta.
 * *archivos cabecera (o header)*: Archivos en los que se realiza la implementación de cada clase.
-* *main.cpp*: Archivo que contiene la función *main*. En este archivo se realiza la lectura/escritura de archivos.
+* `main.cpp`: Archivo que contiene la función `main`. En este archivo se realiza la lectura/escritura de archivos.
 
 En estos archivos deberás desarrollar la implementación de cada una de las clases que integran la solución del problema presentado en esta actividad. En la parte superior de cada archivo coloca deberás, en comentarios, tus datos. Por ejemplo:
 ```
@@ -29,49 +29,49 @@ Ten en cuenta que habrá varias clases. Por lo tanto, deberás trabajarás con v
 
 ### <span style="color: rgb(26, 99, 169);">**Clases**</span>
 Existen 5 clases interactuando entre sí en este proyecto:
-* Customer (cliente).
-* Operator (operador).
-* VoxOperator (derivado de Operator).
-* InternetOperator (derivado de Operator).
-* Bill (cuenta).
+* `Customer` (cliente).
+* `Operator` (operador).
+* `VoxOperator` (derivado de Operator).
+* `InternetOperator` (derivado de Operator).
+* `Bill` (cuenta).
 
-Ten en cuenta que será necesario hacer los cálculos necesarios mediante el uso de los métodos correspondiente en las clases *Customer*, *Operator* (o derivados) o *Bill*, no en el programa principal.
+Ten en cuenta que será necesario hacer los cálculos necesarios mediante el uso de los métodos correspondiente en las clases `Customer`, `Operator` (y derivados) o `Bill`, no en el programa principal.
 
 #### <span style="color: rgb(26, 99, 169);">**Bill**</span>
-La clase *Bill* cuenta con las siguientes variables de estado:
-* *limitAmount* : Límite de crédito.
-* *currentDebt* : Deuda actual.
-* *totalMoneySpent* : Dinero total que el cliente ha pagado a lo largo del tiempo.
+La clase `Bill` cuenta con las siguientes variables de estado:
+* `limitAmount` : Límite de crédito.
+* `currentDebt` : Deuda actual.
+* `totalMoneySpent` : Dinero total que el cliente ha pagado a lo largo del tiempo.
 
 La clase cuenta con los siguientes métodos:
 * Constructor con un parámetro (el límite de crédito). Este método deberá inicializar el resto de variables a 0.
 * Constructor de copia.
 * Métodos de acceso para todas las variables de instancia. (Si consideras necesario agregar métodos de modificación, adelante).
-* *add(double amount)*: Agrega cargos a la factura. Si la cantidad es menor o igual 0, no deberá hacer cambios.
-* *pay(double amount)*: Reduce la deuda en la cantidad dada. Si la cantidad es menor o igual a 0, no deberá hacer cambios. Nunca se podrá pagar más cantidad que la deuda actual.
-* *changeTheLimit(double amount)*: Cambia el límite de crédito, siempre y cuando sea mayor a la deuda actual. Si la cantidad es menor o igual a 0, no deberá hacer cambios.
-* *check*: Regresa verdadero si la cantidad más la deuda actual no existe el límite de crédito.
+* `add(double amount)`: Agrega cargos a la factura. Si la cantidad es menor o igual 0, no deberá hacer cambios.
+* `pay(double amount)`: Reduce la deuda en la cantidad dada. Si la cantidad es menor o igual a 0, no deberá hacer cambios. Nunca se podrá pagar más cantidad que la deuda actual.
+* `changeTheLimit(double amount)`: Cambia el límite de crédito, siempre y cuando sea mayor a la deuda actual. Si la cantidad es menor o igual a 0, no deberá hacer cambios.
+* `check(double amount)`: Regresa verdadero si la cantidad más la deuda actual no existe el límite de crédito.
 
 #### <span style="color: rgb(26, 99, 169);">**Operator**</span>
-Si bien, existen dos tipos de operadores, aquellos que dan un mayor soporte a llamadas y mensajes(*VOX*) y aquellos que dan un mayor soporte al uso de Internet (*INTERNET*), todos comparte características comunes. La clase *Operator* define estas características. Las variables de estado con las que cuenta son:
-* *id* : Identificador único del operador.
-* *discountRate*: Porcentaje de descuento a aplicar.
-* *talkingCharge*: El costo por minuto de llamada.
-* *messageCost*: El costo por envío de mensaje.
-* *networkCharge*: El costo por GB utilizado.
-* *totalSpentTalkingTime*: El tiempo total que se ha empleado en llamadas.
-* *totalMessageSent*: Los mensajes totales que se han enviado.
-* *totalInternetUsage*: El total de GB's utilizados.
-* *type*: Tipo de operador (VOX o INTERNET).
+Si bien, existen dos tipos de operadores, aquellos que dan un mayor soporte a llamadas y mensajes(*VOX*) y aquellos que dan un mayor soporte al uso de Internet (*INTERNET*), todos comparte características comunes. La clase `Operator` define estas características. Las variables de estado con las que cuenta son:
+* `id`: Identificador único del operador.
+* `discountRate`: Porcentaje de descuento a aplicar.
+* `talkingCharge`: El costo por minuto de llamada.
+* `messageCost`: El costo por envío de mensaje.
+* `networkCharge`: El costo por GB utilizado.
+* `totalSpentTalkingTime`: El tiempo total que se ha empleado en llamadas.
+* `totalMessageSent`: Los mensajes totales que se han enviado.
+* `totalInternetUsage`: El total de GB's utilizados.
+* `type`: Tipo de operador (VOX o INTERNET).
 
 La clase cuenta con los siguientes métodos:
 * Constructor con 6 parámetros. Recibe el id, el costo por minuto de llamada, el costo por envío de mensaje, el costo por GB, el porcentaje de descuento y el tipo de operador. El resto de las variables debe inicializarse a 0.
 * Constructor de copia.
 * Métodos de acceso para todas las variables de instancia. (Si consideras necesario agregar métodos de modificación, adelante).
-* *addTalkingTime(int minute)*: Si la cantidad es mayor a 0, agrega la cantidad al tiempo total que se ha empleado en llamadas.
-* *addTotalMessageSent(int quantity)*: Si la cantidad es mayor a 0, agrega la cantidad al total de mensajes enviados.
-* *addTotalInternetUsage(double amount)*: Si la cantidad es mayor a 0, agrega la cantidad a los GB's totales empleados.
-* *toString()*: Regresa un string con el siguiente formato: "Operator #id : totalSpentTalkingTime totalMessageSent addTotalInternetUsage". Todas las cantidades de punto flotantes deben tener una precisión de dos números decimales.
+* `addTalkingTime(int minute)`: Si la cantidad es mayor a 0, agrega la cantidad al tiempo total que se ha empleado en llamadas.
+* `addTotalMessageSent(int quantity)`: Si la cantidad es mayor a 0, agrega la cantidad al total de mensajes enviados.
+* `addTotalInternetUsage(double amount)`: Si la cantidad es mayor a 0, agrega la cantidad a los GB's totales empleados.
+* `toString()`: Regresa un string con el siguiente formato: "Operator #id : totalSpentTalkingTime totalMessageSent addTotalInternetUsage". Todas las cantidades de punto flotantes deben tener una precisión de dos números decimales.
 
 #### <span style="color: rgb(26, 99, 169);">**VoxOperator**</span>
 Este tipo de operador se especializa en aquellas personas que hacen un uso más intensivo de las llamadas y los mensajes de texto. Deriva de *Operator*.
