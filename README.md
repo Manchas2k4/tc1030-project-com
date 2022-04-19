@@ -72,6 +72,9 @@ La clase cuenta con los siguientes métodos:
 * `addTotalMessageSent(int quantity)`: Si la cantidad es mayor a 0, agrega la cantidad al total de mensajes enviados.
 * `addTotalInternetUsage(double amount)`: Si la cantidad es mayor a 0, agrega la cantidad a los GB's totales empleados.
 * `toString()`: Regresa un string con el siguiente formato: "Operator #id : totalSpentTalkingTime totalMessageSent addTotalInternetUsage". Todas las cantidades de punto flotantes deben tener una precisión de dos números decimales.
+* `virtual double calculateTalkingCost(int, int) = 0;`: Función virtual. Debe ser implementada en las clases derivadas.
+* `virtual double calculateMessageCost(int, int, int) = 0;`: Función virtual. Debe ser implementada en las clases derivadas.
+* `virtual double calculateNetworkCost(double) = 0;`: Función virtual. Debe ser implementada en las clases derivadas.
 
 #### <span style="color: rgb(26, 99, 169);">**VoxOperator**</span>
 Este tipo de operador se especializa en aquellas personas que hacen un uso más intensivo de las llamadas y los mensajes de texto. Deriva de `Operator`.
