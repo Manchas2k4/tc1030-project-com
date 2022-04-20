@@ -121,7 +121,7 @@ La clase cuenta con los siguientes métodos:
 #### <span style="color: rgb(26, 99, 169);">**main.cpp**</span>
 En el archivo *main.cpp* se realizarán las operaciones generales de entrada y salida. Leerás de un archivo de entrada las operaciones sobre la simulación, las deberás realizar e imprimirás los resultados en el archivo de salida.
 
-Las operaciones se explican de manera más desatallada, más adeelante en este documento. El nombre de los archivos de entrada y salida se darán como argumentos del programa a través de la línea de comandos. Si el archivo de entrada no existe, el programa termina.
+Las operaciones se detallan más adelante. El nombre de los archivos de entrada y salida se darán como argumentos del programa a través de la línea de comandos. Si el archivo de entrada no existe, el programa termina.
 
 Deberás manejar dos vectores, uno para apuntadores a objetos `Customer` y otro para apuntadores a objetos `Operator`.
 
