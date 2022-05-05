@@ -29,11 +29,11 @@ Ten en cuenta que habrá varias clases. Por lo tanto, trabajarás con varios arc
 
 ### <span style="color: rgb(26, 99, 169);">**Clases**</span>
 Existen 5 clases interactuando entre sí en este proyecto:
-* `Customer` (cliente).
-* `Operator` (operador).
-* `VoxOperator` (derivado de Operator).
-* `InternetOperator` (derivado de Operator).
-* `Bill` (cuenta).
+* `Customer`.
+* `Operator`.
+* `VoxOperator` (derivado de `Operator`).
+* `InternetOperator` (derivado de `Operator`).
+* `Bill`.
 
 Ten en cuenta que será necesario hacer los cálculos necesarios mediante el uso de los métodos correspondiente en las clases `Customer`, `Operator` (y derivados) o `Bill`, no en el programa principal.
 
