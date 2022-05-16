@@ -130,7 +130,7 @@ Vas a leer el archivo de entrada elemento por elemento.
 
 La primera línea tiene tres números enteros, `C`, `O` y `N`. El número `C` represnta el número de clientes que estarán en la simulación. El segundo número, `O`, indica el número de operadores en la simulación. El tercer número, `N`, representa el número de eventos a simular.
 
-Las siguientes línea `N` serán algunas de las siguientes operaciones:
+Las siguientes `N` líneas serán algunas de las siguientes operaciones:
 1. Creando un nuevo cliente.
 2. Creando un nuevo operador.
 3. Un cliente puede hablar con otro cliente.
