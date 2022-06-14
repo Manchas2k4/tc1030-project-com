@@ -94,7 +94,7 @@ La clase cuenta con los siguientes métodos:
 * Constructor de copia. Debe invocar al constructor de la clase superior.
 * `calculateTalkingCost(int minute, int age)`: Si la cantidad de minutos o la edad es menor igual a 0, regresará 0. En caso contrario, calcula el costo de la llamada tomando en cuenta el costo por minuto definido. Si la cantidad de minutos es menor a 2, le aplica el descuento definido.
 * `double calculateMessageCost(int quantity, int thisOpId, int otherOpId)`: Si la cantidad de mensajes es menor igual a 0, regresará 0. En caso contrario, calcula el costo de enviar los mensajes tomando en cuenta el costo por envío definido. Si la cantidad de mensajes enviados es menor a 3, le aplica el descuento definido.
-* `calculateNetworkCost(double amount)`: Si la cantidad de GB es menor o igual a cero, regresará 0. Sólo se aplicarán cargos si la cantidad de GB utilizados en total, excede al limite de 1 GB.
+* `calculateNetworkCost(double amount)`: Si la cantidad de GB es menor o igual a cero, regresará 0. Sólo se cobrará la cantidad de GB que exceda el limite de 1 GB.
 
 #### <span style="color: rgb(26, 99, 169);">**Customer**</span>
 La clase `Customer` cuenta con las siguientes variables de estado:
