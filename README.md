@@ -149,10 +149,10 @@ Esta línea contiene un 1 seguido del nombre del cliente, la edad, el identifica
 Toma en cuenta que el identificador del cliente será el orden de creación. Por ejemplo, el primer cliente creado debe tener id 0 y debe colocarse la posición 0 del vector. Además, no existe ninguna operación para crear un objeto `Bill` (lo debes realizar en el constructor del cliente).
 
 ##### <span style="color: rgb(26, 99, 169);">**2. Creando un nuevo operador**</span>
-Esta línea contiene un 2 seguido del cargo por llamada, cargo por mensaje, cargo por uso de internet y el descuento a aplicar.
+Esta línea contiene un 2 seguido del tipo de operador (1 = VOX, 2 = INTERNET), cargo por llamada, cargo por mensaje, cargo por uso de internet y el descuento a aplicar.
 
 ```
-2 <talkingCharge> <messageCost> <networkCharge> <discountRate>
+2 <opType> <talkingCharge> <messageCost> <networkCharge> <discountRate>
 ```
 Toma en cuenta que el identificador del operador será el orden de creación. Por ejemplo, el primer operador creado debe tener Id 0 y debe colocarse en la posición 0 del vector.
 
