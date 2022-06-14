@@ -50,7 +50,7 @@ La clase cuenta con los siguientes métodos:
 * `add(double amount)`: Agrega cargos a la factura. Si la cantidad es menor o igual 0, no deberá hacer cambios.
 * `pay(double amount)`: Reduce la deuda en la cantidad dada. Si la cantidad es menor o igual a 0, no deberá hacer cambios. Nunca se podrá pagar más cantidad que la deuda actual.
 * `changeTheLimit(double amount)`: Cambia el límite de crédito, siempre y cuando sea mayor a la deuda actual. Si la cantidad es menor o igual a 0, no deberá hacer cambios.
-* `check(double amount)`: Regresa verdadero si la cantidad más la deuda actual no existe el límite de crédito.
+* `check(double amount)`: Regresa verdadero si la cantidad más la deuda actual no excede el límite de crédito.
 
 #### <span style="color: rgb(26, 99, 169);">**Operator**</span>
 Si bien, existen dos tipos de operadores, aquellos que dan un mayor soporte a llamadas y mensajes(*VOX*) y aquellos que dan un mayor soporte al uso de Internet (*INTERNET*), todos comparte características comunes. La clase `Operator` define estas características. Las variables de estado con las que cuenta son:
