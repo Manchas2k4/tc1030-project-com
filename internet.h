@@ -12,7 +12,7 @@
 
 class InternetOperator : public Operator {
 private:
-  const double LIMITGB = 10.0;
+  const double LIMITGB = 1.0;
 
 public:
   InternetOperator(int, double, double, double, int, OperatorType);
