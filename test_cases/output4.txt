@@ -8,13 +8,13 @@ Operator 6: 0 0 0.00
 Customer 0: 0.00 25.32
 Customer 1: 16.65 0.00
 Customer 2: 7.77 0.00
-Customer 3: 15.08 17.49
-Customer 4: 0.00 53.12
+Customer 3: 15.08 16.58
+Customer 4: 0.00 57.95
 Customer 5: 20.89 0.81
 Customer 6: 0.00 7.73
-Customer 7: 21.95 0.00
-Customer 8: 3.94 23.90
+Customer 7: 21.04 0.00
+Customer 8: 3.03 22.99
 Customer 9: 6.84 3.36
-e: 94
+e: 55
 a: 57
 e: 35.00

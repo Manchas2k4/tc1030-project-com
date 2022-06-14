@@ -1,5 +1,5 @@
 // =========================================================
-// File: testing_internet.cpp
+// File: testing_op.cpp
 // Author: Pedro O. Perez-Murueta, Phd.
 // Date: 4/Jan/2022
 // Description: This file contains the series of tests that
@@ -76,9 +76,9 @@ TEST_CASE("testing calculation by internet usage",
 	InternetOperator op(1, 10.00, 10.00, 10.00, 10, INTERNET);
 
 	REQUIRE(op.calculateNetworkCost(-10) == 0);
-  REQUIRE(op.calculateNetworkCost(10) == 0);
+  REQUIRE(op.calculateNetworkCost(10) == 90);
   op.addTotalInternetUsage(10);
-  REQUIRE(op.calculateNetworkCost(10) == 100);
+  REQUIRE(op.calculateNetworkCost(10) == 90);
 }
 
 TEST_CASE("testing copy constructor",
